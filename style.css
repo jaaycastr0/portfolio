@@ -5,7 +5,7 @@
 }
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mibile-dark.jpeg);
+  --bg-url: url(./assets/Background.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -14,7 +14,7 @@
 }
 .light {
   --text-color: black;
-  --bg-url: url(./assets/lightmode.png.jpeg);
+  --bg-url: url(./assets/light-mobile.png);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -23,6 +23,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 * {
   font-family: "Inter", sans-serif;
@@ -130,8 +131,16 @@ ul li a:hover {
 #social-links a:hover {
   background: var(--highlight-color);
 }
-footer{
+footer {
   padding: 24px 0;
   text-align: center;
+}
 
+@media (min-width:700px) {
+  :root {
+    --bg-url: url(./assets/dark-mode-bg.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/light-mode-bg.jpg);
+  }
 }
